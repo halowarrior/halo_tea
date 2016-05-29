@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Adam Hallett"]
   spec.email         = ["adam.t.hallett@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Halo encryption and decryption functions.}
+  spec.description   = %q{Halo encryption and decryption functions.}
+  spec.homepage      = "http://github.com"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -27,5 +27,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.12"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "byebug"
+  spec.add_development_dependency "rspec", "~> 3.4.0"
+  spec.add_dependency "rake", "~> 10.0"
+  spec.add_dependency "ffi", "~> 1.9.10"
+  spec.add_dependency "ffi-compiler"
+
+  spec.extensions =  [
+    'ext/Rakefile',
+  ]
 end

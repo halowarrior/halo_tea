@@ -1,0 +1,8 @@
+require 'bundler/gem_tasks'
+require 'ffi'
+require 'ffi-compiler'
+require 'ffi-compiler/compile_task'
+
+FFI::Compiler::CompileTask.new('ext/halo_pck_algo.h') do |ct|
+
+end
